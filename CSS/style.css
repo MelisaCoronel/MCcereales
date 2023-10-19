@@ -1,0 +1,206 @@
+/*Estilos generales*/
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: blanchedalmond;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap; /*permite que los elementos se envuelvan en dispositivos moviles*/
+    justify-content: space-between; /*distribuye el espacio horizontal*/
+    align-items: center;
+    text-align: center;
+    margin: 15px; /*da un margen exterior*/
+}
+.item{
+    flex: 1; /*permite que los elementos ocupen el mismo espacio*/
+    background-color: rgb(255, 200, 127);
+    color: black;
+    padding: 10px;
+    border-radius: 5px; /*bordes*/
+    box-shadow: 0px 10px 0px rgba( 0, 0, 0, 0.2); /*Sombra*/
+    margin: 10px;
+}
+/*Establecer diseño responsivo para dispositivos moviles*/
+@media(max-width: 600px) {
+    .container{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+.item:hover{
+    transform: scale(1.1);
+    background-color: antiquewhite; /*cuando pase por encima, cambie de color*/
+} 
+/*para el tamaño de las imagenes de los cereales*/
+.img{
+    width: 180px;
+    height: 180px;
+}
+/*Para el navegador*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: rgb(243, 174, 83);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+    background-color: #111;
+}
+/*para la imagen del logo*/
+.altura {
+    height: 50px;
+    width: 50px;
+}
+/* Formulario de contacto */ 
+.contact_form{	
+	width: 50%; 
+    height: auto;
+    margin: 80px auto;
+	border-radius: 10px;  
+	padding-top: 30px;
+	padding-bottom: 20px;  
+    background-color:  blanchedalmond; 
+    padding-left: 30px; 
+}
+input{
+	background-color: #fbfbfb; 
+	width: 80%; 
+	height: 40px; 
+	border-radius: 10px;  
+	border-style: solid; 
+	border-width: 1px; 
+	border-color: #b17034; 
+	margin-top: 10px;  
+	padding-left: 10px;
+    margin-bottom: 20px; 
+}
+textarea{
+    background-color: #fbfbfb; 
+	width: 80%; 
+	height: 150px; 
+	border-radius: 10px;  
+	border-style: solid; 
+	border-width: 1px; 
+	border-color: #b17034; 
+	margin-top: 10px;  
+	padding-left: 10px;
+    margin-bottom: 20px; 
+    padding-top: 15px; 
+}
+label{
+    display: block; 
+	float: center; 	
+}
+button{
+	height: 45px; 
+	padding-left: 5px;
+	padding-right: 5px; 	
+	margin-bottom: 20px; 
+	margin-top: 10px; 	
+	text-transform: uppercase;
+	background-color:  rgb(255, 200, 127); 
+	border-color:  rgb(255, 200, 127); 
+	border-style: solid; 
+	border-radius: 10px;	
+	width: 82%;   
+    cursor: pointer;
+}
+button p{
+	color: #db8b23; 
+}
+span{
+	color: #b46c28; 
+}
+.aviso{
+	font-size: 13px;  
+	color: #0e0e0e;  
+}
+h1{
+	font-size: 39px;  
+	text-align: letf; 
+	padding-bottom: 20px; 
+	color: #e9924b;
+}
+h3{
+	font-size: 16px; 
+	padding-bottom: 30px;
+	color: #0e0e0e;   
+}
+p{
+	font-size: 14px; 
+	color: #0e0e0e; 
+}
+::-webkit-input-placeholder {
+    color: #a8a8a8;
+}
+::-webkit-textarea-placeholder {
+    color: #a8a8a8;
+}
+.formulario input:focus{
+	outline:0;
+	border: 1px solid #caa426;
+}
+.formulario textarea:focus{
+	outline:0;
+	border: 1px solid #caa426;
+}
+  
+/*mision-vision div*/
+.misionvision{	
+    width: 90%;
+    height: auto;
+    margin: 50px auto;
+	border-radius: 10px;  
+	padding-top: 10px;
+	padding-bottom: 20px;  
+    background-color: rgb(255, 200, 127); 
+    padding-left: 10px; 
+}
+/*footer*/
+footer {
+    display: flex;
+    padding: 10px 5px;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+}
+footer p {
+    flex: 1;
+    margin: 0;
+}
+footer ul {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+/*color footer, borde y altura/ancho imagen*/
+.colorfooter{
+    background-color:rgb(5, 5, 5);
+    text-align: center;
+    padding: 14px 16px;
+}
+/*Alto - Ancho imagen icono redes*/
+.taman{
+    width: 30px;
+    right: 30px;
+} 
+/*color copy*/
+.pfooter{
+    color: rgb(179, 120, 31);
+}
+
