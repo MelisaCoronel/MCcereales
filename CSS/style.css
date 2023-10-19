@@ -11,7 +11,6 @@ body{
     justify-content: space-between; /*distribuye el espacio horizontal*/
     align-items: center;
     text-align: center;
-    margin: 15px; /*da un margen exterior*/
 }
 .item{
     flex: 1; /*permite que los elementos ocupen el mismo espacio*/
@@ -39,132 +38,72 @@ body{
     height: 180px;
 }
 /*Para el navegador*/
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+header {
     background-color: #333;
-}
-li {
-    float: left;
-}
-li a {
-    display: block;
-    color: rgb(243, 174, 83);
+    color: #fff;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
     text-decoration: none;
 }
-li a:hover:not(.active) {
-    background-color: #111;
-}
+.intro {
+    padding: 20px;
+    text-align: center;
+ }
 /*para la imagen del logo*/
 .altura {
     height: 50px;
     width: 50px;
 }
 /* Formulario de contacto */ 
-.contact_form{	
-	width: 50%; 
-    height: auto;
-    margin: 80px auto;
-	border-radius: 10px;  
-	padding-top: 30px;
-	padding-bottom: 20px;  
-    background-color:  blanchedalmond; 
-    padding-left: 30px; 
-}
-input{
-	background-color: #fbfbfb; 
-	width: 80%; 
-	height: 40px; 
-	border-radius: 10px;  
-	border-style: solid; 
-	border-width: 1px; 
-	border-color: #b17034; 
-	margin-top: 10px;  
-	padding-left: 10px;
-    margin-bottom: 20px; 
-}
-textarea{
-    background-color: #fbfbfb; 
-	width: 80%; 
-	height: 150px; 
-	border-radius: 10px;  
-	border-style: solid; 
-	border-width: 1px; 
-	border-color: #b17034; 
-	margin-top: 10px;  
-	padding-left: 10px;
-    margin-bottom: 20px; 
-    padding-top: 15px; 
-}
-label{
-    display: block; 
-	float: center; 	
-}
-button{
-	height: 45px; 
-	padding-left: 5px;
-	padding-right: 5px; 	
-	margin-bottom: 20px; 
-	margin-top: 10px; 	
-	text-transform: uppercase;
-	background-color:  rgb(255, 200, 127); 
-	border-color:  rgb(255, 200, 127); 
-	border-style: solid; 
-	border-radius: 10px;	
-	width: 82%;   
-    cursor: pointer;
-}
-button p{
-	color: #db8b23; 
-}
-span{
-	color: #b46c28; 
-}
-.aviso{
-	font-size: 13px;  
-	color: #0e0e0e;  
-}
-h1{
-	font-size: 39px;  
-	text-align: letf; 
-	padding-bottom: 20px; 
-	color: #e9924b;
-}
-h3{
-	font-size: 16px; 
-	padding-bottom: 30px;
-	color: #0e0e0e;   
-}
-p{
-	font-size: 14px; 
-	color: #0e0e0e; 
-}
-::-webkit-input-placeholder {
-    color: #a8a8a8;
-}
-::-webkit-textarea-placeholder {
-    color: #a8a8a8;
-}
-.formulario input:focus{
-	outline:0;
-	border: 1px solid #caa426;
-}
-.formulario textarea:focus{
-	outline:0;
-	border: 1px solid #caa426;
-}
+.contact-form {
+    background-color: rgb(255, 200, 127);
+    padding: 5%;
+ }
+
+ .contact-form h4 {
+    text-align: center;
+    margin-bottom: 20px;
+ }
+
+ .contact-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+ }
+
+ .contact-form label {
+    font-weight: bold;
+ }
+
+ .contact-form input,
+ .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+ }
   
 /*mision-vision div*/
 .misionvision{	
-    width: 90%;
+    width: 95%;
     height: auto;
     margin: 50px auto;
-	border-radius: 10px;  
-	padding-top: 10px;
+	border-radius: 5px;  
+	padding-top: 20px;
 	padding-bottom: 20px;  
     background-color: rgb(255, 200, 127); 
     padding-left: 10px; 
@@ -203,4 +142,52 @@ footer ul {
 .pfooter{
     color: rgb(179, 120, 31);
 }
+
+  /* Boton con animacion */
+button{
+    background:rgb(225, 165, 86) ;
+    border:none;
+    position:relative;
+    height: 30px;
+    font-size:1.6em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+}
+button:hover{
+    background:#7b4015;
+    color:#e1b56b;
+}
+button:before,button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #6d4a2e;
+    transition:400ms ease all;
+}
+button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+}
+button:hover:before,button:hover:after{
+    width:100%;
+    transition:800ms ease all;
+}
+.centrarbotones{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px;
+    text-align: center;
+    font-size: small;
+}
+
+
+
 
