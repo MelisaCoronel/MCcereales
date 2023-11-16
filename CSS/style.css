@@ -37,68 +37,65 @@ body{
     width: 180px;
     height: 180px;
 }
-/*Para el navegador*/
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-}
-h1{
-    text-align: left;
-}
-
-nav ul {
-    list-style: none;
+ /* Cambio en la barra de navegacion */
+ .main-nav {
+    background:  #000000;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .menu {
+    transition: all 0.5s;
+    margin: 0;
     padding: 0;
-}
-
-nav li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav a {
+    list-style: none;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .menu__item {
+    margin: 0 15px;
+  }
+  .menu__link {
     color: #fff;
     text-decoration: none;
-}
-.intro {
-    padding: 20px;
-    text-align: center;
- }
+  }
+  .menu-bar {
+    width: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  .uno, .dos, .tres {
+    width: 100%;
+    background: white;
+    height: 3px;
+    transition: all 0.5s;
+  }
+  .dos {
+    margin: 5px 0;
+  }
+  /*animacion*/
+  
+  .mostrar  .uno {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .mostrar .dos {
+    opacity: 0;
+  }
+  .mostrar .tres {
+    transform: rotate(-45deg) translate(6px, -7px);
+  }
+  .mostrar .menu{
+    visibility: visible;
+    opacity: 1;
+  }
+
 /*para la imagen del logo*/
 .altura {
     height: 50px;
     width: 50px;
 }
-/* Formulario de contacto */ 
-.contact-form {
-    background-color: rgb(255, 200, 127);
-    padding: 5%;
- }
-
- .contact-form h4 {
-    text-align: center;
-    margin-bottom: 20px;
- }
-
- .contact-form form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
- }
-
- .contact-form label {
-    font-weight: bold;
- }
-
- .contact-form input,
- .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
- }
   
 /*mision-vision div*/
 .misionvision{	
@@ -113,10 +110,10 @@ nav a {
 }
 /*footer*/
 footer {
-    display: flex;
     padding: 10px 5px;
     background-color: rgb(0, 0, 0);
     color: #fff;
+    text-align: center;
 }
 footer p {
     flex: 1;
@@ -147,50 +144,391 @@ footer ul {
 }
 
   /* Boton con animacion */
-button{
-    background:rgb(225, 165, 86) ;
-    border:none;
-    position:relative;
-    height: 30px;
-    font-size:1.6em;
-    padding:0 2em;
-    cursor:pointer;
-    transition:800ms ease all;
-    outline:none;
-}
-button:hover{
-    background:#7b4015;
-    color:#e1b56b;
-}
-button:before,button:after{
-    content:'';
-    position:absolute;
-    top:0;
-    right:0;
-    height:2px;
-    width:0;
-    background: #6d4a2e;
-    transition:400ms ease all;
-}
-button:after{
-    right:inherit;
-    top:inherit;
-    left:0;
-    bottom:0;
-}
-button:hover:before,button:hover:after{
-    width:100%;
-    transition:800ms ease all;
-}
-.centrarbotones{
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px;
+
+.boton {
+    background: #e07523; /* color de fondo */
+    color: #000000; /* color de fuente */
+    border: 2px solid #000000; /* tamaño y color de borde */
+    padding: 16px 20px;
+    border-radius: 3px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+  }
+  .boton:hover {
+    color: #ffffff; /* color de fuente hover */
+  }
+  .boton::after {
+    content: "";
+    background: #b1d741; /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 50px 20px;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 100%;
+    bottom: -100%;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+  .boton:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+/* FORMULARIO DE CONTACTO */
+.textfor{
     text-align: center;
-    font-size: small;
+}
+.formulariocontacto{	
+    width: 95%;
+    height: auto;
+    margin: 50px auto;
+	border-radius: 5px;  
+	padding-top: 20px;
+	padding-bottom: 20px;  
+    background-color: rgb(255, 200, 127); 
+    padding-left: 10px; 
+}
+
+* {		/*Mini reset*/
+	padding:0;
+	margin:0;
+	text-rendering:optimizelegibility;	/*invalido*/
+	font-family: 'Raleway', helvetica, arial, verdana;
+}
+
+body {
+	background:#f6f6f6;
+}
+
+#boxContent {
+	background:#eee;
+	padding:10px;
+	margin:10px auto;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+#boxContent h1{
+	text-align: center;
+	font-size: 2.4em;
+	font-weight: 100;
+}
+
+.contenedorForm {
+	display: block;
+}
+
+.derecha {
+	text-align: right;
+}
+
+.campoTexto {
+	width:76%;
+	padding:5px 9px;
+	height:25px;
+	border:0;
+	border-radius: 3px;
+	box-shadow:inset 0px 0px 2px rgba(0,0,0,0.3);
+	outline: none;
+	font-size:18px;
+	position: relative;
+}
+
+.campoTexto:focus {
+	box-shadow:inset 0px 0px 6px rgba(0,0,0,0.2);
+}
+
+#nombre {
+	margin:5px 0 5px -10px;
+}
+#email {
+	margin:5px -10px 5px 0;
+}
+#mensaje {
+	margin:5px 0 10px -18px;
+	height: 70px;
+	padding:5px 15px;
+	display: inline-block;
+	vertical-align: middle;
+	max-height: 70px;
+	max-width:76%;
+}
+
+.enviar-btn {
+	width:30%;
+	display: block;
+	margin: 10px auto;
+	padding:10px 2px;
+	background: #e18a1f;
+	font-size: 20px;
+	border:0;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.enviar-btn:hover {
+	opacity:0.9;
+}
+
+.enviar-btn:active {
+	box-shadow:inset 0px 0px 6px rgba(0,0,0,0.3);
+	outline: none;
+	color:#fff;
+}
+
+#formMobile {
+	display: none;
+}
+
+.labelform {
+	background: #e1931f;
+	border-radius: 100%;
+	padding:10px;
+	display: inline-block;
+	width:120px;
+	height:120px;
+	text-align:center;
+	color:white;
+	line-height: 120px;
+	font-size: 20px;
+	position: relative;
+	z-index: 1;
+	cursor: pointer;
+}
+
+	/*Media queries*/
+
+@media screen and (min-width:1024px) { 	/*Minimo pantallas pequeñas*/
+	#boxContent {
+		width:64%;
+	}
+}
+
+@media screen and (max-width:1024px) {	/*Maximo pantallas pequeñas*/
+	#boxContent {
+		width:84%;
+	}
+}
+@media screen and (max-width:768px) {	/*Estilos para móviles*/
+	#formContent {
+		display: none;
+	}
+
+	#formMobile {
+	display: block;
+	}
+	.radio {
+		visibility: hidden;
+		display: none;
+	}
+
+	label {
+	display: block;
+	margin: 0 auto;
+	text-decoration: underline;
+	}
+
+	.campoTexto {
+	transition:.2s;  /*Dar compatibilidad*/
+	margin: 10px auto;
+	opacity:0;
+	display: block;
+	}
+
+	#radioNombre:checked ~ #nombreMobile {
+		opacity:1;
+	}
+
+	#radioEmail:checked ~ #emailMobile {
+		opacity:1;
+	}
+
+	#radioMensaje:checked ~ #mensajeMobile {
+		opacity:1;
+	}
+}
+/* redes sociales */
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.contenedor-redes-sociales {
+    margin: 20px 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.contenedor-redes-sociales a {
+    position: relative;
+    display: inline-block;
+    height: 36px;
+    width: 160px;
+    line-height: 35px;
+    padding: 0;
+    color: #fff;
+    border-radius: 50px;
+    background: #fff;
+    margin: 5px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.contenedor-redes-sociales a:hover span.circulo {
+    left: 100%;
+    margin-left: -35px;
+    background: #fff;
+}
+
+.contenedor-redes-sociales a:hover span.titulo {
+    opacity: 0;
+}
+
+.contenedor-redes-sociales a:hover span.titulo-hover {
+    opacity: 1;
+    color: #fff;
+}
+
+.contenedor-redes-sociales a span.titulo-hover {
+    opacity: 0;
+}
+
+.contenedor-redes-sociales a span.circulo {
+    display: block;
+    color: #fff;
+    position: absolute;
+    float: left;
+    margin: 3px;
+    line-height: 30px;
+    height: 30px;
+    width: 30px;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+    border-radius: 50%;
+}
+
+.contenedor-redes-sociales a span.circulo i {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.contenedor-redes-sociales a span.titulo, .contenedor-redes-sociales a span.titulo-hover {
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 400;
+    transition: .5s;
+}
+
+.contenedor-redes-sociales a span.titulo {
+    right: 15px
+}
+
+.contenedor-redes-sociales a span.titulo-hover {
+    left: 15px
 }
 
 
+/*----------Colores de los botones----------*/
+
+.contenedor-redes-sociales .facebook {
+    border: 2px solid #3b5998;
+}
+
+.contenedor-redes-sociales .facebook:hover, .contenedor-redes-sociales .facebook span.circulo {
+    background: #3b5998;
+}
+
+.contenedor-redes-sociales .facebook:hover span.circulo, .contenedor-redes-sociales .facebook span.titulo {
+    color: #3b5998;
+}
+
+.contenedor-redes-sociales .twitter {
+    border: 2px solid #1da1f2;
+}
+
+.contenedor-redes-sociales .twitter:hover, .contenedor-redes-sociales .twitter span.circulo {
+    background: #1da1f2;
+}
+
+.contenedor-redes-sociales .twitter:hover span.circulo, .contenedor-redes-sociales .twitter span.titulo {
+    color: #1da1f2;
+}
+
+.contenedor-redes-sociales .gplus {
+    border: 2px solid #dd4b39;
+}
+
+.contenedor-redes-sociales .gplus:hover, .contenedor-redes-sociales .gplus span.circulo {
+    background: #dd4b39;
+}
+
+.contenedor-redes-sociales .gplus:hover span.circulo, .contenedor-redes-sociales .gplus span.titulo {
+    color: #dd4b39;
+}
 
 
+/*--------------Mediaqueries--------------*/
+
+@media screen and (max-width: 480px) {
+    .contenedor-redes-sociales a {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+}
+/* MODO NOCTURNO/DIURNO */
+.switch {
+    margin: 5px;
+    background: #000000;
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position:sticky ;
+    display: flex;
+  }
+  .switch::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: rgb(160, 108, 53);
+    border-radius: 50px;
+    top: 0;
+    left: 0;
+    display: block;
+    right: unset;
+    transition: 5s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .switch.active {
+    background-color: blanchedalmond;
+  }
+  .active::after {
+    right: 0;
+    left: unset;
+  }
+  body.dark {
+    background: #181818;
+  }
+/* TAMAÑO DE LA IMAGEN DEL FOOTER */
+.tamaimagen{
+    width: 150px;
+    right: 150px;
+    float: left;
+}
