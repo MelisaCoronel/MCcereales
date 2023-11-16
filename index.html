@@ -2,43 +2,41 @@
 <html lang="es"> 
     <head> 
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> MC Cereales</title>
         <link rel="stylesheet" href="./CSS/reset.css">
         <link rel="stylesheet" href="./CSS/style.css">
-
     </head>
     <body>
         <header>
-            <h1>MC Cereales</h1>
-            <nav>
-                <ul>
-                    <li><a href="#PRODUCTOS">Productos</a></li>
-                    <li><a href="#mision">Misión</a></li>
-                    <li><a href="#vision">Visión</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+            <!-- NAVEGADOR -->
+            <nav class="main-nav" id="main-nav">
+                <ul class="menu">
+                  <li class="menu__item"><a class="menu__link" href="#mision">Misión</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#vision">Visión</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#PRODUCTOS">Productos</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#contacto">Contacto</a></li>
                 </ul>
-            </nav>
-        </header>
-        <main>
-            <div class="intro" id="PRODUCTOS">
-                <div class="container">
-                    <div class="item"> <img src="./IMAGENES/AVENA.jpg" alt="AVENA" class="img"> <p>Avena</p> </div>
-                    <div class="item"> <img src="./IMAGENES/ARROZ.jpg" alt="ARROZ" class="img">  <p>Arroz Blanco</p>  </div>
-                    <div class="item"> <img src="./IMAGENES/ARROZINTEGRAL.jpg" alt="ARROZINTEGRAL" class="img"> <p>Arroz Integral</p> </div>
-                    <div class="item"> <img src="./IMAGENES/ARROZNEGRO.jpg" alt="ARROZNEGRO" class="img"> <p>Arroz Negro</p> </div>
-                    <div class="item"> <img src="./IMAGENES/ARROZROJO.jpg" alt="ARROZROJO" class="img"> <p>Arroz Rojo</p> </div>
-                    <div class="item"> <img src="./IMAGENES/CEBADA.jpg" alt="CEBADA" class="img"> <p>Cebada</p> </div>
-                    <div class="item"> <img src="./IMAGENES/garbanzo.jpg" alt="GARBANZO" class="img"> <p>Garbanzo</p> </div>
-                    <div class="item"> <img src="./IMAGENES/MAIZ.jpg" alt="MAIZ" class="img"> <p>Maiz</p> </div>
-                    <div class="item"> <img src="./IMAGENES/QUINOA.jpg" alt="QUINOA" class="img"> <p>Quinoa</p> </div>
-                    <div class="item"> <img src="./IMAGENES/SOJA.jfif" alt="SOJA" class="img"> <p>Soja</p>  </div>
+                <div class="menu-bar" id="menu">
+                  <div class="uno"></div>
+                  <div class="dos"></div>
+                  <div class="tres"></div>
                 </div>
+              </nav>
+        </header>
+        <div> 
+        <!-- IMAGENES DE LOS PRODUCTOS OFRECIDOS -->
+        <main>
+            <div>
+                <!-- BOTON PARA CAMBIAR EL COLOR DEL FONDO -->
+                <button class="switch" id="switch">
+                    <img src="https://symbl-world.akamaized.net/i/webp/0e/637e9e1755d722b00e081e92203026.webp" width="45" data-src="https://symbl-world.akamaized.net/i/webp/0e/637e9e1755d722b00e081e92203026.webp" class="lazyloaded" alt="Primer cuarto de luna con cara">
+                </button>
             </div>
             <section class="misionvision" id="mision">
-                <h2> <img src="./IMAGENES/logosinfondo.png" class="taman">
-                    Misión
-                </h2>
+                <h1 class="textfor"> <img src="./IMAGENES/logosinfondo.png" class="taman">
+                    MISIÓN
+                </h1>
                 <p>
                     Nuestra misión es inspirar y nutrir el espíritu humano: una persona, una taza y un vecindario a la vez. Decir que MC Coronel® compra y exporta granos de alta calidad es muy cierto. Esa es la esencia de lo que hacemos, pero difícilmente cuenta toda la historia.
                 </p>
@@ -51,43 +49,107 @@
                 </p>
             </section>
             <section class="misionvision" id="vision">
-                <h3> <img src="./IMAGENES/logosinfondo.png" class="taman">
-                    Visión
-                </h3>
+                <h2 class="textfor"> <img src="./IMAGENES/logosinfondo.png" class="taman">
+                    VISIÓN
+                </h2>
                 <p> 
                     Ser el mejor líder total de cereales, que genere valor económico, social y ambiental sostenible gestionando modelos de negocio innovadores y ganadores, con los mejores colaboradores en el mundo.
                 </p>
             </section>
-            <section class="contact-form" id="contacto">
-                <h4> <img src="./IMAGENES/logosinfondo.png" class="taman"> Contacto</h4>
-                <br>
-                <p>Escríbenos y en breve los pondremos en contacto contigo</p>
-                <br>
-                <br>
-                <form>
-                    <label for="nombre" class="c ">Nombre</label>
-                    <input type="text" id="nombre" name="introducir_nombre" required placeholder="Escribe tu nombre"></input>
-                    <label for="nombre">Telefono Celular</label>
-                    <input type="tel" name="introducir_telefono" id="telefono" required placeholder="Escribe tu teléfono"></imput>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="introducir_email" required placeholder="Escribe tu mail">
-                    <label for="website" class="colocar_website">Sitio web</label>
-                    <input type="url" name="introducir_website" id="website" placeholder="Escribe la URL de tu web">
-                    <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje"></textarea>
-                </form>
-                <div class="centrarbotones">
-                    <button type="submit"> Enviar</button>
-                    <button type="button"> Cancelar</button>
+            <div class="misionvision">
+                <h3 class="textfor">PRODUCTOS DESTACADOS</h3>
+                <div class="intro" id="PRODUCTOS">
+                    <div class="container">
+                        <div class="item"> <img src="./IMAGENES/AVENA.jpg" alt="AVENA" class="img"> <p>Avena $150 por kilo</p> </div>
+                        <div class="item"> <img src="./IMAGENES/ARROZ.jpg" alt="ARROZ" class="img">  <p>Arroz Blanco $250 por kilo</p>  </div>
+                        <div class="item"> <img src="./IMAGENES/ARROZINTEGRAL.jpg" alt="ARROZINTEGRAL" class="img"> <p>Arroz Integral $140 por kilo</p> </div>
+                        <div class="item"> <img src="./IMAGENES/ARROZNEGRO.jpg" alt="ARROZNEGRO" class="img"> <p>Arroz Negro $110 por kilo</p> </div>
+                        <div class="item"> <img src="./IMAGENES/ARROZROJO.jpg" alt="ARROZROJO" class="img"> <p>Arroz Rojo $190 por kilo</p> </div>
+                        <div class="item"> <img src="./IMAGENES/CEBADA.jpg" alt="CEBADA" class="img"> <p>Cebada $350 por kilo</p> </div>
+                        <div class="item"> <img src="./IMAGENES/garbanzo.jpg" alt="GARBANZO" class="img"> <p>Garbanzo $50 por kilo</p> </div>
+                        <div class="item"> <img src="./IMAGENES/MAIZ.jpg" alt="MAIZ" class="img"> <p>Maiz $70 por kilo</p> </div>
+                        <div class="item"> <img src="./IMAGENES/QUINOA.jpg" alt="QUINOA" class="img"> <p>Quinoa $150 por kilo</p> </div>
+                        <div class="item"> <img src="./IMAGENES/SOJA.jfif" alt="SOJA" class="img"> <p>Soja $160 por kilo</p>  </div>
+                    </div>
                 </div>
-            </section>
+            </div>
+            <!-- CALCULO DE PRECIO, CON LA CALCULADORA PODRAN CALCULAR EL PRECIO QUE LE SALDRA AL COMPRAR MAS DE UN KILO EN UN PRODUCTO EN ESPECIAL-->
+            <div class="misionvision">
+                <h4 class="textfor">CALCULADORA (Podrá calcular el precio final de un producto seleccionado, sin salir de la página)</h4> 
+
+                <input type="text" id="n11" placeholder="PRECIO DEL PRODUCTO">
+            
+                <input type="text" id="n22" placeholder="CANTIDAD">
+
+                <select id="op">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+                
+            <button id="calcular2" class="boton"> PRECIO </button>
+
+            <output id="r2"></output> 
+            </div>
+            <!-- FORMULARIO DE CONTACTO -->
+            <div class="formulariocontacto" id="contacto">
+                <h5 class="textfor">FORMULARIO DE CONTACTO</h5>
+            <form id="form">
+            <div id="formContent">
+            <div class="contenedorForm">
+                <label for="nombre" class="labelform">NOMBRE</label>
+                <input class="campoTexto" type="text" required id="nombre" name="nombre">
+            </div>
+            <div class="contenedorForm derecha">
+                <input class="campoTexto" type="email" required id="email" name="mail">
+                <label for="email" class="labelform">CORREO</label>
+            </div>
+            <div class="contenedorForm">
+                <label for="mensaje" class="labelform">MENSAJE</label>
+                <textarea class="campoTexto" id="mensaje" required></textarea>
+            </div>
+                <input type="submit" value="ENVIAR" class="enviar-btn">
+            </div>
+            	<!-- Formulario para móviles -->
+	        <div id="formMobile">
+		        <input type="radio" name="radio-1" class="radio" id="radioNombre">
+		        <label for="radioNombre" class="labelform">NOMBRE</label>
+			    <input type="text" id="nombreMobile" class="campoTexto" required placeholder="NOMBRE COMPLETO">
+		        <input type="radio" name="radio-2" class="radio" id="radioEmail">
+		        <label for="radioEmail" class="labelform">CORREO</label>
+			    <input type="email" id="emailMobile" class="campoTexto" required placeholder="CORREO ELECTRONICO">
+		        <input type="radio" name="radio-3" class="radio" id="radioMensaje">
+		    <label for="radioMensaje" class="labelform">MENSAJE</label>
+			<textarea id="mensajeMobile" class="campoTexto" required placeholder="MENSAJE"></textarea>
+
+			<input type="submit" value="ENVIAR" class="enviar-btn">
+	        </div>
+            </form>
         </main>
         <footer class="footer">
-                <p class="colorfooter pfooter">&copy; 2023 MC Cereales</p>
-                <!-- <img src="./IMAGENES/imgFooter.png" class="taman colorfooter"> -->
-                <a href="https://m.facebook.com/login/?locale=es_LA&refsrc=deprecated" class="colorfooter" target="_blank"> <img src="./IMAGENES/facebook.png" alt="Facebook" class="taman"> </a>
-                <a href="https://web.whatsapp.com/" class="colorfooter" target="_blank"> <img src="./IMAGENES/whatsapp.png" alt="Whatsapp" class="taman"></a>
-                <a href="https://www.instagram.com/" class="colorfooter" target="_blank"> <img src="./IMAGENES/intagram.png" alt="Instagram" class="taman"></a>
+            <img src="./IMAGENES/logosinfondo.png" class="tamaimagen">
+            <p>&copy; 2023 MC Cereales</p>
+                <div class="contenedor-redes-sociales">
+                    <a class="facebook" href="https://www.facebook.com/FormandoLaWeb" target="_blank">
+                        <span class="circulo"></span>
+                        <span class="titulo">Facebook</span>
+                        <span class="titulo-hover">Seguir</span>
+                    </a>
+           
+                   <a class="twitter" href="https://www.twitter.com/FormandoLaWeb" target="_blank">
+                       <span class="circulo"></span>
+                       <span class="titulo">Twitter</span>
+                       <span class="titulo-hover">Seguir</span>
+                   </a>
+           
+                   <a class="gplus" href="https://plus.google.com/114090693030000856714" target="_blank">
+                       <span class="circulo"></span>
+                       <span class="titulo">Google+</span>
+                       <span class="titulo-hover">Seguir</span>
+                   </a>
+               </div>
         </footer>
+        <script src="./JAVASCRIPT/JavaSript.js"></script>
     </body>
 </html>
